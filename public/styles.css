@@ -1,0 +1,126 @@
+/* Expense Tracker — clean, light theme with a navy header and gold accent. */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #1c2733;
+}
+
+.hidden { display: none !important; }
+.muted { color: #6b7a89; }
+.error {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.topbar {
+  background: #0f2a4a;
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 { margin: 0; font-size: 1.25rem; }
+
+.container { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8ee;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(15, 42, 74, 0.06);
+}
+
+.card h2 { margin: 0 0 12px; font-size: 1.1rem; }
+
+label { display: block; margin-bottom: 12px; font-size: 0.9rem; font-weight: 600; }
+
+input, select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  border: 1px solid #cbd5de;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+input:focus, select:focus { outline: 2px solid #d4a017; border-color: #d4a017; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.form-actions { display: flex; gap: 10px; }
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-primary { background: #d4a017; color: #1c2733; font-weight: 700; }
+.btn-primary:hover { background: #c08f12; }
+.btn-ghost { background: transparent; color: inherit; border: 1px solid #cbd5de; }
+.btn-danger { background: #fdecea; color: #b3261e; }
+.btn-small { padding: 5px 10px; font-size: 0.85rem; }
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #0f2a4a;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.switch { margin: 12px 0 0; text-align: center; }
+
+.total { font-size: 1.25rem; margin: 0 0 14px; }
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 110px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.bar-track { background: #eef1f4; border-radius: 4px; height: 14px; overflow: hidden; }
+.bar-fill { background: #d4a017; height: 100%; border-radius: 4px; }
+.bar-value { text-align: right; color: #44566a; }
+
+.expense-list { list-style: none; margin: 0; padding: 0; }
+
+.expense-item {
+  display: grid;
+  grid-template-columns: 100px 110px 1fr 80px auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #eef1f4;
+  font-size: 0.95rem;
+}
+
+.expense-item:first-child { border-top: none; }
+.expense-amount { font-weight: 700; text-align: right; }
+.expense-category { color: #44566a; }
+.expense-note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+  .expense-item { grid-template-columns: 90px 1fr 70px auto; }
+  .expense-note, .expense-category { display: none; }
+  .bar-row { grid-template-columns: 90px 1fr 90px; }
+}
