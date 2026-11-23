@@ -26,7 +26,7 @@ end-to-end work with Node.js, Express, PostgreSQL and JWT authentication.
 ## How to run locally
 
 ```bash
-git clone https://github.com/Iamking12/expense-tracker.git
+git clone https://github.com/bilalsakhizada12-star/expense-tracker.git
 cd expense-tracker
 npm install
 cp .env.example .env   # then set JWT_SECRET to a long random string
